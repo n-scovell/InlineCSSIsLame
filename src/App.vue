@@ -1,6 +1,11 @@
 <template>
   <div>
-    <component n8style :is='c.obj' v-for="(c,index) in myObjects" :key="index+'_com'"  :id="c.id">{{c.txt}}</component>
+    <div v-bind:n8style="spec" >
+      WOWZERSssss
+    </div>
+    <div v-bind:n8style="spec" >
+      COOL
+    </div>
   </div>
 </template>
 <script>
@@ -10,37 +15,12 @@ export default {
   name: 'App',
   data() {
     return {
-      tester:'heynow',
-      myObjects: [
-        {
-          txt:'A',
-          cls:'clsA',
-          id:'idA',
-          obj:'p',
-          style:`background-color:red;color:white;margin:0px;`
-        },
-        {
-          txt:'B',
-          cls:'clsB',
-          id:'idB',
-          obj:'p',
-          style:`color:red;margin:0px;`
-        },
-        {
-          txt:'C',
-          cls:'clsC',
-          id:'idC',
-          obj:'p',
-          style:`padding:10px 10px; background-color:blue; color: yellow;margin:0px;`
-        },
-
-      ]
+      spec:`padding:110px; color:red; background:yellow; margin:20px;`
     }
   },
   methods: {
   },
   mounted() {
-    this.thisIsWorking(this.myObjects)
   }
 }
 </script>
